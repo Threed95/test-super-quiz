@@ -1,0 +1,23 @@
+    .banner {
+        padding: 7.75em 0 6.06em;
+        position: relative;
+        text-align: center;
+        &__text {
+            max-width: 34.5em;
+            font-size: 1.25em;
+            font-weight: $base-weight;
+            margin: 0em auto 1.6em;
+        }
+        &__img {
+            position: absolute;
+            max-width: 19.8em;
+            bottom: 0em;
+            height: auto;
+            &--left {
+                left: 0em;
+            }
+            &--right {
+                right: 0em;
+            }
+        }
+    }
