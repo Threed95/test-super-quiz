@@ -1,26 +1,31 @@
-.menu {
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        column-gap: 2em;
-    }
-    &__item {
-        font-size: 1.25em;
-        font-weight: $base-weight;
-        &--dropdown {
-            position: relative;
-            z-index: 2;
-            &:hover .menu__link {
-                display: block;
-                padding: 0.6em 0.8em;
-                border-radius: 1em;
-                background-color: #000;
-                color: $primary-color;
-            }
-            &:hover .submenu {
-                display: block;
+    .menu {
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 2em;
+        }
+        &__item {
+            font-size: 1.25em;
+            font-weight: $base-weight;
+            &--dropdown {
+                position: relative;
+                z-index: 2;
+                &:hover .menu__link {
+                    display: block;
+                    padding: 0.6em 0.8em;
+                    border-radius: 1em;
+                    background-color: #000;
+                    color: $primary-color;
+                }
+                &:hover .submenu {
+                    display: block;
+                }
+                & .menu__link {
+                    &:hover {
+                        background-color: $hover-color;
+                    }
+                }
             }
         }
     }
-}

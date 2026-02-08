@@ -137,6 +137,9 @@ li {
 .menu__item--dropdown:hover .submenu {
   display: block;
 }
+.menu__item--dropdown .menu__link:hover {
+  background-color: #9E00FF;
+}
 
 .quiz-start {
   display: block;
