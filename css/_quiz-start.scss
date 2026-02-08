@@ -1,7 +1,7 @@
 .quiz-start {
     display: block;
-    margin: 0em auto;
     width: 12.55em;
-    height: 2.35em;
+    @include button;
+    margin: 0em auto;
     line-height: 2.35em;
 }

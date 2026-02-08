@@ -13,10 +13,18 @@
         <header class="header">
             <div class="logo">Super Quiz</div>
             <nav class="menu">
-                <a href="#" class="menu__item">Главная</a>
-                <a href="#" class="menu__item">Квиз</a>
-                <a href="#" class="menu__item">Отзывы</a>
-                <a href="#" class="menu__item">Не главная</a>
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Квиз</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                    <li class="menu__item menu__item--dropdown"> <a class="menu__link" href="#">Не главная</a>
+                        <ul class="submenu">
+                            <li class="submenu__item"><a href="#" class="submenu__link">Подпункт</a></li>
+                            <li class="submenu__item"><a href="#" class="submenu__link">Ещё подпункт</a></li>
+                            <li class="submenu__item"><a href="#" class="submenu__link">И ещё один пункт</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
             <button id="open-modal" class="button button--primary">Связаться с нами</button>
             <div class="social-links">

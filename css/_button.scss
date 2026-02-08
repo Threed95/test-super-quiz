@@ -1,11 +1,6 @@
 .button {
+    @include button($height: 2.25em);
     width: 11.55em;
-    height: 2.25em;
-    border-radius: 1em;
-    font-weight: $base-weight;
-    font-size: 1.25em;
-    background-color: #000;
-    cursor: pointer;
     &:hover {
         background-color: $hover-color;
         transition: 0.15s ease;

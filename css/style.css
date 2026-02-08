@@ -53,6 +53,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 .banner {
   padding: 7.75em 0 6.06em;
   position: relative;
@@ -78,13 +82,13 @@ a {
 }
 
 .button {
-  width: 11.55em;
   height: 2.25em;
-  border-radius: 1em;
+  border-radius: 1.25em;
   font-weight: 500;
   font-size: 1.25em;
   background-color: #000;
   cursor: pointer;
+  width: 11.55em;
 }
 .button:hover {
   background-color: #9E00FF;
@@ -108,7 +112,7 @@ a {
   font-size: 2.25em;
 }
 
-.menu {
+.menu__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,12 +123,31 @@ a {
   font-size: 1.25em;
   font-weight: 500;
 }
+.menu__item--dropdown {
+  position: relative;
+  z-index: 2;
+}
+.menu__item--dropdown:hover .menu__link {
+  display: block;
+  padding: 0.6em 0.8em;
+  border-radius: 1em;
+  background-color: #000;
+  color: #FFF;
+}
+.menu__item--dropdown:hover .submenu {
+  display: block;
+}
 
 .quiz-start {
   display: block;
-  margin: 0em auto;
   width: 12.55em;
   height: 2.35em;
+  border-radius: 1.25em;
+  font-weight: 500;
+  font-size: 1.25em;
+  background-color: #000;
+  cursor: pointer;
+  margin: 0em auto;
   line-height: 2.35em;
 }
 
@@ -140,4 +163,24 @@ a {
   font-family: "NeueMachina";
   font-size: 6em;
   margin-bottom: 0.34em;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  min-width: 15em;
+  left: -0.2em;
+  top: 3.2em;
+}
+.submenu__item:not(:last-child) {
+  margin-bottom: 1.35em;
+}
+.submenu__link {
+  padding: 0.6em 0.8em;
+  background-color: #000;
+  color: #FFF;
+  border-radius: 1em;
+}
+.submenu__link:hover {
+  background-color: #9E00FF;
 }/*# sourceMappingURL=style.css.map */

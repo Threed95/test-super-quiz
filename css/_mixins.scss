@@ -1,0 +1,8 @@
+@mixin button ($height: 2.35em) {
+    height: $height;
+    border-radius: 1.25em;
+    font-weight: $base-weight;
+    font-size: 1.25em;
+    background-color: #000;
+    cursor: pointer;
+}
