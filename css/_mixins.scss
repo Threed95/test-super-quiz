@@ -6,3 +6,13 @@
     background-color: #000;
     cursor: pointer;
 }
+
+@mixin input-style {
+    flex: 1;
+    width: 100%;
+    border: none;
+    font-size: 2em;
+    font-weight: $base-weight;
+    border-bottom: 0.06em solid #000;
+    outline: none;
+}

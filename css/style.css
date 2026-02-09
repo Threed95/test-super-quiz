@@ -38,6 +38,7 @@ html {
 
 body {
   font-size: 16px;
+  height: 100vh;
   font-family: "Raleway", sans-serif;
 }
 
@@ -99,12 +100,17 @@ li {
 }
 
 .header {
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  width: 100%;
   padding: 1.25em 3em;
   border: 0.06em solid #F2F2F2;
   border-radius: 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
 }
 
 .logo {
@@ -186,4 +192,260 @@ li {
 }
 .submenu__link:hover {
   background-color: #9E00FF;
+}
+
+.modal {
+  position: relative;
+  display: none;
+  padding: 3em 2em;
+  width: 42.25em;
+  border-radius: 2em;
+  margin: 0em auto;
+  background-color: #fff;
+  z-index: 10;
+}
+.modal__title {
+  font-size: 4.5em;
+  font-family: "NeueMachina";
+  margin-bottom: 1.13em;
+}
+.modal__closeBtn {
+  position: absolute;
+  font-size: 1.5em;
+  width: 2.33em;
+  height: 2.33em;
+  background-color: #fff;
+  right: 0.5em;
+  top: 0.5em;
+  padding: 0.6em;
+  border: 0.08em solid #000;
+  border-radius: 0.6em;
+}
+.modal__closeBtn:hover {
+  background-color: #9E00FF;
+}
+.modal__text {
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-bottom: 1.2em;
+}
+.modal__button {
+  width: 19.13em;
+  height: 1.94em;
+  margin: 0 auto;
+  color: #FFF;
+  font-size: 2em;
+}
+
+.form__item {
+  display: flex;
+  -moz-column-gap: 1.5em;
+       column-gap: 1.5em;
+}
+.form__input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  font-size: 2em;
+  font-weight: 500;
+  border-bottom: 0.06em solid #000;
+  outline: none;
+  padding: 0.25em 0;
+}
+.form__input::-moz-placeholder {
+  opacity: 30%;
+}
+.form__input::placeholder {
+  opacity: 30%;
+}
+.form__add-file {
+  position: relative;
+  margin-bottom: 2em;
+}
+.form__textarea {
+  flex: 1;
+  width: 100%;
+  border: none;
+  font-size: 2em;
+  font-weight: 500;
+  border-bottom: 0.06em solid #000;
+  outline: none;
+  padding: 0.31em 3.44em 0.31em 0;
+  resize: none;
+}
+.form__textarea::-moz-placeholder {
+  opacity: 30%;
+}
+.form__textarea::placeholder {
+  opacity: 30%;
+}
+.form__textarea--error-red {
+  border-bottom: 0.06em solid red;
+}
+.form__add-btn {
+  position: absolute;
+  right: 2em;
+  bottom: 0.6em;
+  background-color: #000;
+  font-size: 1.25em;
+  border-radius: 0.4em;
+  padding: 0.3em 0.4em;
+  color: #FFF;
+  cursor: pointer;
+}
+.form__file-input {
+  display: none;
+}
+.form__description {
+  font-size: 1.25em;
+  margin-bottom: 1.2em;
+  font-weight: 500;
+}
+.form__wrapper {
+  position: relative;
+}
+.form__error {
+  display: none;
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 0.4em;
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.33em;
+  margin-bottom: 2.66em;
+}
+.radio-group__input {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.radio-group__input:checked + .radio-group__label::after {
+  transform: translateY(-50%) scale(1);
+}
+.radio-group__input:checked + .radio-group__label {
+  background-color: #000;
+  color: #FFF;
+}
+.radio-group__label {
+  cursor: pointer;
+  position: relative;
+  padding: 0.33em 1.76em;
+  font-size: 1.5em;
+  font-weight: 500;
+  border: 0.08em solid #000;
+  border-radius: 0.83em;
+}
+.radio-group__label::before {
+  content: "";
+  position: absolute;
+  left: 0.4em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.08em solid #000;
+  background-color: #fff;
+}
+.radio-group__label::after {
+  content: "";
+  position: absolute;
+  left: 0.63em;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 0.66em;
+  height: 0.66em;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.page--open {
+  background-color: rgba(247, 235, 255, 0.5019607843);
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+}
+.page--hidden {
+  display: none;
+}
+
+.cross {
+  position: absolute;
+  font-size: 1.5em;
+  width: 2.33em;
+  height: 2.33em;
+  background-color: #fff;
+  right: 0.4em;
+  top: 0.4em;
+  padding: 0.6em;
+  border: 0.08em solid #000;
+  border-radius: 0.6em;
+  cursor: pointer;
+}
+.cross:hover {
+  background-color: #9E00FF;
+}
+
+.second-step {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  z-index: 1000;
+}
+.second-step--hidden {
+  display: none;
+}
+.second-step__content {
+  padding: 8em 0.5em 0.5em;
+  border-radius: 2em;
+  max-width: 25em;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+.second-step__emoji {
+  font-size: 8em;
+  margin-bottom: 0.19em;
+}
+.second-step__title {
+  font-size: 4.5em;
+  font-family: "NeueMachina";
+  margin-bottom: 0.35em;
+}
+.second-step__text {
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-bottom: 3.2em;
+}
+.second-step__button {
+  width: 19.13em;
+  height: 1.94em;
+  margin: 0 auto;
+  color: #FFF;
+  font-size: 2em;
+}
+.second-step__button:hover {
+  background-color: #9E00FF;
+}
+.second-step__closeBtn {
+  right: 0.8em;
+  top: 0.8em;
 }/*# sourceMappingURL=style.css.map */

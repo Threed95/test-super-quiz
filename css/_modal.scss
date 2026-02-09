@@ -1,0 +1,42 @@
+.modal {
+    position: relative;
+    display: none;
+    padding: 3em 2em;
+    width: 42.25em;
+    border-radius: 2em;
+    margin: 0em auto;
+    background-color: #fff;
+    z-index: 10;
+    &__title {
+        font-size: 4.5em;
+        font-family: 'NeueMachina';
+        margin-bottom: 1.13em;
+    }
+    &__closeBtn {
+        position: absolute;
+        font-size: 1.5em;
+        width: 2.33em;
+        height: 2.33em;
+        background-color: #fff;
+        right: 0.5em;
+        top: 0.5em;
+        padding: 0.6em;
+        border: 0.08em solid #000;
+        border-radius: 0.6em;
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+    &__text {
+        font-size: 1.25em;
+        font-weight: $base-weight;
+        margin-bottom: 1.2em;
+    }
+    &__button {
+        width: 19.13em;
+        height: 1.94em;
+        margin: 0 auto;
+        color: $primary-color;
+        font-size: 2em;
+    }
+}

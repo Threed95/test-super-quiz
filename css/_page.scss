@@ -1,0 +1,9 @@
+.page {
+    &--open {
+        background-color: #F7EBFF80;
+        backdrop-filter: blur(200px)
+    }
+    &--hidden {
+        display: none;
+    }
+}
