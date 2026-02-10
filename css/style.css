@@ -735,4 +735,130 @@ li {
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.reviews {
+  padding: 6em 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.reviews__viewport {
+  overflow: hidden;
+  border-radius: 3em;
+}
+.reviews__track {
+  display: flex;
+  gap: 1.5em;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+  display: flex;
+  gap: 1.25em;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(calc(-12.5% + 0.62em));
+}
+.reviews__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.reviews__arrow:hover {
+  background: #f0f0f0;
+}
+.reviews__arrow--prev {
+  left: -10px;
+}
+.reviews__arrow--prev::after {
+  transform: rotate(-135deg);
+  margin-left: 4px;
+}
+.reviews__arrow--next {
+  right: -10px;
+}
+.reviews__arrow--next::after {
+  transform: rotate(45deg);
+  margin-right: 4px;
+}
+.reviews__arrow::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  display: block;
+}
+
+.review-card {
+  position: relative;
+  flex: 0 0 calc(25% - 20px);
+  background: #fff;
+  border-radius: 2em;
+  overflow: hidden;
+  height: 29em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  justify-content: flex-end;
+  box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.05);
+}
+.review-card__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.review-card__bg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.review-card__avatar-wrapper {
+  position: absolute;
+  top: -2.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 0.3em solid #fff;
+  overflow: hidden;
+  background: #fff;
+}
+.review-card__avatar {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.review-card__body {
+  position: relative;
+  width: 100%;
+  padding: 3.5em 1.5em 1.5em;
+  border-radius: 1.5em;
+  text-align: center;
+  z-index: 2;
+  background-color: #FFF;
+}
+.review-card__name {
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+.review-card__text {
+  font-size: 1em;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

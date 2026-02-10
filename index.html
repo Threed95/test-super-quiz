@@ -9,6 +9,7 @@
     <script src="./js/form.js" defer></script>
     <script src="./js/popup.js" defer></script>
     <script src="./js/startQuiz.js" defer></script>
+    <script src="./js/reviews.js" defer></script>
     <title>Super Quiz</title>
 </head>
 
@@ -21,8 +22,8 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Квиз</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#quiz">Квиз</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#reviews">Отзывы</a></li>
                         <li class="menu__item menu__item--dropdown"> <a class="menu__link" id="dropdown-link" href="#">Не главная</a>
                             <ul class="submenu" id="submenu">
                                 <li class="submenu__item"><a href="#" class="submenu__link">Подпункт</a></li>
@@ -34,13 +35,13 @@
                 </nav>
                 <button id="open-modal" class="button button--primary">Связаться с нами</button>
                 <div class="social-links">
-                    <a href="" class="social-links__item">
+                    <a href="#" class="social-links__item">
                         <img src="./img/tt-icon.svg" alt="tik-tok">
                     </a>
-                    <a href="" class="social-links__item">
+                    <a href="#" class="social-links__item">
                         <img src="./img/vk-icon.svg" alt="vk">
                     </a>
-                    <a href="" class="social-links__item">
+                    <a href="#" class="social-links__item">
                         <img src="./img/tg-icon.svg" alt="telegram">
                     </a>
                 </div>
@@ -48,12 +49,12 @@
             <section class="banner">
                 <h1 class="title">Это Супер-квиз!</h1>
                 <p class="banner__text">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
-                <a href="#" class="quiz-start button button--primary">Пройти супер-квиз</a>
+                <a href="#quiz" class="quiz-start button button--primary">Пройти супер-квиз</a>
                 <img class="banner__img banner__img--left" src="./img/img-left.png" alt="img-left">
                 <img class="banner__img banner__img--right" src="./img/img-right.png" alt="img-right">
             </section>
 
-            <section class="quiz">
+            <section class="quiz" id="quiz">
 
                 <div class="emoji-bar">
                     <button class="emoji-bar__item">
@@ -125,6 +126,133 @@
                 </div>
             </section>
 
+            <section class="reviews" id="reviews">
+                <button class="reviews__arrow reviews__arrow--prev js-reviews-prev" aria-label="Назад"></button>
+                <button class="reviews__arrow reviews__arrow--next js-reviews-next" aria-label="Вперед"></button>
+
+                <div class="reviews__viewport">
+                    <div class="reviews__track js-reviews-track">
+                        <!-- Слайд 1 -->
+                        <article class="review-card">
+                            <div class="review-card__header">
+                                <img src="./img/bg-1.png" alt="фон карточки" class="review-card__bg">
+
+                            </div>
+                            <div class="review-card__body">
+                                <div class="review-card__avatar-wrapper">
+                                    <img src="./img/avatar-1.png" alt="Андрей" class="review-card__avatar">
+                                </div>
+                                <h3 class="review-card__name">Андрей Пархимович</h3>
+                                <p class="review-card__text">В целом, конечно, постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.</p>
+                            </div>
+                        </article>
+
+                        <!-- Слайд 2 -->
+                        <article class="review-card">
+                            <div class="review-card__header">
+                                <img src="./img/bg-2.png" alt="фон карточки" class="review-card__bg">
+
+                            </div>
+                            <div class="review-card__body">
+                                <div class="review-card__avatar-wrapper">
+                                    <img src="./img/avatar-2.png" alt="Тимур" class="review-card__avatar">
+                                </div>
+                                <h3 class="review-card__name">Тимур Никитенко</h3>
+                                <p class="review-card__text">Господа, глубокий уровень погружения в значительной степени обуславливает важность глубокомысленных рассуждений.</p>
+                            </div>
+                        </article>
+
+                        <!-- Слайд 3 -->
+                        <article class="review-card">
+                            <div class="review-card__header">
+                                <img src="./img/bg-3.png" alt="фон 3 карточки" class="review-card__bg">
+
+                            </div>
+                            <div class="review-card__body">
+                                <div class="review-card__avatar-wrapper">
+                                    <img src="./img/avatar-3.png" alt="Артур" class="review-card__avatar">
+                                </div>
+                                <h3 class="review-card__name">Артур Усович</h3>
+                                <p class="review-card__text">Задача организации, в особенности же убежденность некоторых оппонентов предопределяет высокую востребованность перспектив.</p>
+                            </div>
+                        </article>
+
+                        <!-- Слайд 4 -->
+                        <article class="review-card">
+                            <div class="review-card__header">
+                                <img src="./img/bg-4.png" alt="фоновое изображение" class="review-card__bg">
+
+                            </div>
+                            <div class="review-card__body">
+                                <div class="review-card__avatar-wrapper">
+                                    <img src="./img/avatar-1.png" alt="Егор" class="review-card__avatar">
+                                </div>
+                                <h3 class="review-card__name">Егор Грей</h3>
+                                <p class="review-card__text">Разнообразный и богатый опыт говорит нам, что высокое качество позиционных исследований предопределяет высокую востребованность кластеризации усилий.</p>
+                            </div>
+                        </article>
+
+                        <!-- Слайд 5-->
+
+                        <article class="review-card">
+                            <div class="review-card__header">
+                                <img src="./img/bg-2.png" alt="фоновое изображение" class="review-card__bg">
+
+                            </div>
+                            <div class="review-card__body">
+                                <div class="review-card__avatar-wrapper">
+                                    <img src="./img/avatar-3.png" alt="Тимур" class="review-card__avatar">
+                                </div>
+                                <h3 class="review-card__name">Тимур Никитенко</h3>
+                                <p class="review-card__text">Разнообразный и богатый опыт говорит нам, что высокое качество позиционных исследований предопределяет высокую востребованность кластеризации усилий.</p>
+                            </div>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-card__header">
+                                <img src="./img/bg-3.png" alt="фон 3 карточки" class="review-card__bg">
+
+                            </div>
+                            <div class="review-card__body">
+                                <div class="review-card__avatar-wrapper">
+                                    <img src="./img/avatar-3.png" alt="Артур" class="review-card__avatar">
+                                </div>
+                                <h3 class="review-card__name">Артур Усович</h3>
+                                <p class="review-card__text">Задача организации, в особенности же убежденность некоторых оппонентов предопределяет высокую востребованность перспектив.</p>
+                            </div>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-card__header">
+                                <img src="./img/bg-2.png" alt="фон карточки" class="review-card__bg">
+
+                            </div>
+                            <div class="review-card__body">
+                                <div class="review-card__avatar-wrapper">
+                                    <img src="./img/avatar-2.png" alt="Тимур" class="review-card__avatar">
+                                </div>
+                                <h3 class="review-card__name">Тимур Никитенко</h3>
+                                <p class="review-card__text">Господа, глубокий уровень погружения в значительной степени обуславливает важность глубокомысленных рассуждений.</p>
+                            </div>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-card__header">
+                                <img src="./img/bg-1.png" alt="фон карточки" class="review-card__bg">
+
+                            </div>
+                            <div class="review-card__body">
+                                <div class="review-card__avatar-wrapper">
+                                    <img src="./img/avatar-1.png" alt="Андрей" class="review-card__avatar">
+                                </div>
+                                <h3 class="review-card__name">Андрей Пархимович</h3>
+                                <p class="review-card__text">В целом, конечно, постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
             <footer class="footer">
                 <div class="container">
                     <div class="footer__contacts">
@@ -140,13 +268,13 @@
                     </div>
                     <div class="footer__wrapper">
                         <div class="social-links social-links--footer">
-                            <a href="" class="social-links__item social-links__item--footer social-links__item--tiktok">
+                            <a href="#" class="social-links__item social-links__item--footer social-links__item--tiktok">
                                 <img class="social-links__icon" src="./img/tt-icon.svg" alt="tik-tok">
                             </a>
-                            <a href="" class="social-links__item social-links__item--footer social-links__item--vk">
+                            <a href="#" class="social-links__item social-links__item--footer social-links__item--vk">
                                 <img class="social-links__icon" src="./img/vk-icon.svg" alt="vk">
                             </a>
-                            <a href="" class="social-links__item social-links__item--footer social-links__item--telegram">
+                            <a href="#" class="social-links__item social-links__item--footer social-links__item--telegram">
                                 <img class="social-links__icon" src="./img/tg-icon.svg" alt="telegram">
                             </a>
                         </div>
@@ -236,9 +364,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 </body>
 
