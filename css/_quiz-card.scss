@@ -1,8 +1,8 @@
 .quiz-card {
     display: flex;
+    position: relative;
     width: 90%;
     overflow: hidden;
-    box-shadow: 0 0.4em 0.5em rgba(0, 0, 0, 0.1);
     &__history {
         width: 20em;
         background-color: transparent;
@@ -42,6 +42,7 @@
         font-weight: $base-weight;
     }
     &__content {
+        position: relative;
         width: 69.5em;
         background-color: #fff;
         padding: 2em 2em 3em;
@@ -50,6 +51,22 @@
         justify-content: space-between;
         align-items: flex-start;
         border-radius: 2em;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: 60px;
+            background: linear-gradient(90deg, #F0D9FF 0%, #E9C4FF 100%);
+            box-shadow: 0 0 40px 10px #E9C4FF;
+            filter: blur(15px);
+            opacity: 0.9;
+            z-index: -1;
+            pointer-events: none;
+        }
     }
     &__question-title {
         font-size: 4.5em;

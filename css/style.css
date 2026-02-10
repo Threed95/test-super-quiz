@@ -117,6 +117,9 @@ li {
   font-family: "NeueMachina";
   font-size: 2.25em;
 }
+.logo--footer {
+  color: #FFF;
+}
 
 .menu__list {
   display: flex;
@@ -166,6 +169,30 @@ li {
   align-items: center;
   -moz-column-gap: 0.5em;
        column-gap: 0.5em;
+}
+.social-links--footer {
+  justify-content: flex-start;
+}
+.social-links__item--footer {
+  display: block;
+  width: 21.38em;
+  height: 4.5em;
+  border-radius: 2.25em;
+  overflow: hidden;
+}
+.social-links__item--tiktok {
+  background-color: #000;
+  border: 0.06em solid rgba(255, 255, 255, 0.2);
+}
+.social-links__item--telegram {
+  background-color: #34AADF;
+}
+.social-links__item--vk {
+  background-color: #4D76A1;
+}
+.social-links__icon {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .title {
@@ -501,9 +528,9 @@ li {
 
 .quiz-card {
   display: flex;
+  position: relative;
   width: 90%;
   overflow: hidden;
-  box-shadow: 0 0.4em 0.5em rgba(0, 0, 0, 0.1);
 }
 .quiz-card__history {
   width: 20em;
@@ -544,6 +571,7 @@ li {
   font-weight: 500;
 }
 .quiz-card__content {
+  position: relative;
   width: 69.5em;
   background-color: #fff;
   padding: 2em 2em 3em;
@@ -552,6 +580,22 @@ li {
   justify-content: space-between;
   align-items: flex-start;
   border-radius: 2em;
+  z-index: 1;
+}
+.quiz-card__content::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 60px;
+  background: linear-gradient(90deg, #F0D9FF 0%, #E9C4FF 100%);
+  box-shadow: 0 0 40px 10px #E9C4FF;
+  filter: blur(15px);
+  opacity: 0.9;
+  z-index: -1;
+  pointer-events: none;
 }
 .quiz-card__question-title {
   font-size: 4.5em;
@@ -660,4 +704,35 @@ li {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+.footer {
+  padding: 2em 3em;
+  background-color: #000;
+}
+.footer__contacts {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3em;
+}
+.footer__contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+.footer__label {
+  font-size: 1.25em;
+  color: #FFF;
+  font-weight: 500;
+}
+.footer__link {
+  font-size: 3em;
+  font-family: "NeueMachina";
+  text-decoration: underline;
+  color: #FFF;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

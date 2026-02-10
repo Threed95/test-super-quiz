@@ -3,4 +3,29 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 0.5em;
+    &--footer {
+        justify-content: flex-start;
+    }
+    &__item {
+        &--footer {
+            display: block;
+            width: 21.38em;
+            height: 4.5em;
+            border-radius: 2.25em;
+            overflow: hidden;
+        }
+        &--tiktok {
+            background-color: #000;
+            border: 0.06em solid rgba(255, 255, 255, 0.2);
+        }
+        &--telegram {
+            background-color: #34AADF;
+        }
+        &--vk {
+            background-color: #4D76A1;
+        }
+    }
+    &__icon {
+        object-fit: contain;
+    }
 }

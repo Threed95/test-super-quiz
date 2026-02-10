@@ -1,0 +1,30 @@
+.footer {
+    padding: 2em 3em;
+    background-color: #000;
+    &__contacts {
+        display: flex;
+        justify-content: flex-start;
+        gap: 3em;
+    }
+    &__contact-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-bottom: 2em;
+    }
+    &__label {
+        font-size: 1.25em;
+        color: $primary-color;
+        font-weight: $base-weight;
+    }
+    &__link {
+        font-size: 3em;
+        font-family: 'NeueMachina';
+        text-decoration: underline;
+        color: $primary-color;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
