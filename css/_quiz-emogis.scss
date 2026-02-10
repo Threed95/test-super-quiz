@@ -1,0 +1,9 @@
+.quiz-emogis {
+    display: flex;
+    gap: 0.62em;
+    margin-bottom: 1.5em;
+    &__item {
+        font-size: 4.5em;
+        user-select: none;
+    }
+}

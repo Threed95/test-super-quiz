@@ -1,0 +1,82 @@
+.quiz-card {
+    display: flex;
+    width: 90%;
+    overflow: hidden;
+    box-shadow: 0 0.4em 0.5em rgba(0, 0, 0, 0.1);
+    &__history {
+        width: 20em;
+        background-color: transparent;
+        color: #fff;
+        margin-right: 0.5em;
+        align-self: start;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    &__history-item {
+        border-bottom-right-radius: 1em;
+        border-top-right-radius: 1em;
+        padding: 1.2em 1em;
+        &--completed {
+            background-color: #ffffff; // Фон становится белым
+            .quiz-card__history-title,
+            .quiz-card__history-answer {
+                color: #000000 !important; // Текст становится черным
+            }
+        }
+        &--current {
+            background-color: #000000;
+            .quiz-card__history-title,
+            .quiz-card__history-answer {
+                color: #ffffff !important;
+            }
+        }
+    }
+    &__history-title {
+        font-size: 1em;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+    }
+    &__history-answer {
+        font-size: 1em;
+        font-weight: $base-weight;
+    }
+    &__content {
+        width: 69.5em;
+        background-color: #fff;
+        padding: 2em 2em 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-radius: 2em;
+    }
+    &__question-title {
+        font-size: 4.5em;
+        margin-bottom: 0.33em;
+        font-family: 'NeueMachina';
+    }
+    &__question-text {
+        font-size: 1.25em;
+        font-weight: $base-weight;
+        margin-bottom: 3.2em;
+    }
+    &__navigation {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 1em;
+    }
+    &__button {
+        padding: 1em 2em;
+        border: none;
+        border-radius: 1em;
+        cursor: pointer;
+        font-size: 1.25em;
+        font-weight: $base-weight;
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}

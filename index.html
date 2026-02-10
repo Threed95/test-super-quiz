@@ -8,6 +8,7 @@
     <script src="./js/modal.js" defer></script>
     <script src="./js/form.js" defer></script>
     <script src="./js/popup.js" defer></script>
+    <script src="./js/startQuiz.js" defer></script>
     <title>Super Quiz</title>
 </head>
 
@@ -50,6 +51,79 @@
                 <a href="#" class="quiz-start button button--primary">Пройти супер-квиз</a>
                 <img class="banner__img banner__img--left" src="./img/img-left.png" alt="img-left">
                 <img class="banner__img banner__img--right" src="./img/img-right.png" alt="img-right">
+            </section>
+
+            <section class="quiz">
+
+                <div class="emoji-bar">
+                    <button class="emoji-bar__item">
+                          <span class="emoji-bar__icon">&#128523;</span>
+                          <span class="emoji-bar__text">Восхитительно</span>
+                        </button>
+                    <button class="emoji-bar__item">
+                          <span class="emoji-bar__icon">&#128526;</span>
+                          <span class="emoji-bar__text">Лучше не бывает</span>
+                        </button>
+                    <button class="emoji-bar__item emoji-bar__item_selected">
+                          <span class="emoji-bar__icon">&#128525;</span>
+                          <span class="emoji-bar__text">Где найти еще?</span>
+                        </button>
+                    <button class="emoji-bar__item emoji-bar__item_selected">
+                          <span class="emoji-bar__icon">&#129321;</span>
+                          <span class="emoji-bar__text">В натуре четко!</span>
+                        </button>
+                    <button class="emoji-bar__item emoji-bar__item_selected">
+                          <span class="emoji-bar__icon">&#128525;</span>
+                          <span class="emoji-bar__text">Круто</span>
+                        </button>
+                </div>
+                <div class="quiz-card">
+                    <div class="quiz-card__history">
+                        <div class="quiz-card__history-item quiz-card__history-item--current">
+                            <div class="quiz-card__history-title">Какие виды тестов вам нравятся?</div>
+                            <div class="quiz-card__history-answer">Кто я из вселенной Марвел. На словарный запас</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-card__content">
+                        <div id="quiz-content-area">
+                            <h2 class="quiz-card__question-title">Какие виды тестов вам нравятся?</h2>
+                            <p class="quiz-card__question-text">
+                                Многие из нас хоть раз попадались на эту удочку — хочешь пройти всего один тест из интернета, и вдруг понимаешь, что пролетело полдня.
+                            </p>
+                            <div class="quiz-card__options radio-group">
+                                <input type="radio" class="radio-group__input" id="answer-1" name="answer" value="">
+                                <label for="answer-1" class="radio-group__label">На темперамент</label>
+
+                                <input type="radio" class="radio-group__input" id="answer-2" name="answer" value="" checked>
+                                <label for="answer-2" class="radio-group__label">Кто я из вселенной Марвел</label>
+
+                                <input type="radio" class="radio-group__input" id="answer-3" name="answer" value="">
+                                <label for="answer-3" class="radio-group__label">Увидел это</label>
+
+                                <input type="radio" class="radio-group__input" id="answer-4" name="answer" value="">
+                                <label for="answer-4" class="radio-group__label">Мое тотемное животное</label>
+
+                                <input type="radio" class="radio-group__input" id="answer-5" name="answer" value="">
+                                <label for="answer-5" class="radio-group__label">На IQ</label>
+
+                                <input type="radio" class="radio-group__input" id="answer-6" name="answer" value="">
+                                <label for="answer-6" class="radio-group__label">На словарный запас</label>
+
+                                <input type="radio" class="radio-group__input" id="answer-7" name="answer" value="">
+                                <label for="answer-7" class="radio-group__label">На логическое мышление</label>
+
+                                <input type="radio" class="radio-group__input" id="answer-8" name="answer" value="">
+                                <label for="answer-8" class="radio-group__label">На уровень интеллекта</label>
+                            </div>
+                        </div>
+                        <div class="quiz-card__navigation">
+                            <button class="quiz-card__button quiz-card__button_secondary" id="back-button">Назад</button>
+                            <button class="quiz-card__button quiz-card__button_primary" id="continue-button">Продолжить</button>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </div>
 

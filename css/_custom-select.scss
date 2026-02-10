@@ -1,0 +1,49 @@
+.custom-select {
+    position: relative;
+    width: fit-content;
+    min-width: 250px;
+    margin-bottom: 4em;
+    &__trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5em 1em;
+        border: 0.1em solid #000;
+        border-radius: 0.6em;
+        cursor: pointer;
+        background: #fff;
+        font-size: 1.25em;
+        font-weight: $base-weight;
+    }
+    &.is-open .custom-select__icon {
+        transform: rotate(180px);
+    }
+    &__options {
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        right: 0;
+        border: 0.1em solid #000;
+        border-radius: 0.6em;
+        background: #fff;
+        overflow: hidden;
+        z-index: 10;
+        &.active {
+            display: block;
+        }
+    }
+    &__.is-open .custom-select__options {
+        display: block;
+    }
+    &__option {
+        padding: 0.6em 1em;
+        cursor: pointer;
+        border-bottom: 0.05em solid #000;
+        font-size: 1.25em;
+        font-weight: $base-weight;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
