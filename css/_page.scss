@@ -1,7 +1,8 @@
 .page {
-    &--open {
+    &--open .banner {
+        display: none;
         background-color: #F7EBFF80;
-        backdrop-filter: blur(200px)
+        backdrop-filter: blur(200px);
     }
     &--hidden {
         display: none;

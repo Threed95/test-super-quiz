@@ -1,0 +1,10 @@
+.fullscreen-overlay {
+    position: fixed;
+    top: 5.5em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F7EBFF80;
+    z-index: 99;
+    display: none;
+}

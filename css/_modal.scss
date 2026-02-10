@@ -1,16 +1,21 @@
 .modal {
     position: relative;
     display: none;
+    top: 10em;
     padding: 3em 2em;
     width: 42.25em;
     border-radius: 2em;
-    margin: 0em auto;
-    background-color: #fff;
-    z-index: 10;
+    background-color: $primary-color;
+    z-index: 100;
+    margin: 0 auto;
     &__title {
         font-size: 4.5em;
         font-family: 'NeueMachina';
         margin-bottom: 1.13em;
+    }
+    &__content {
+        z-index: 5;
+        background-color: $primary-color;
     }
     &__closeBtn {
         position: absolute;
