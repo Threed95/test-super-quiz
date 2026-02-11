@@ -15,8 +15,6 @@
         display: flex;
         gap: 1.25em;
         transition: transform 0.5s ease-in-out;
-        /* Чтобы крайние карточки были обрезаны пополам, 
-           нужно сместить весь трек влево на половину ширины карточки */
         transform: translateX(calc(-12.5% + 0.62em));
     }
     &__arrow {
@@ -25,11 +23,11 @@
         transform: translateY(-50%);
         width: 48px;
         height: 48px;
-        background: #fff;
+        background: $primary-color;
         border: none;
         border-radius: 50%;
         cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
         z-index: 10;
         display: flex;
         align-items: center;
@@ -39,14 +37,14 @@
             background: #f0f0f0;
         }
         &--prev {
-            left: -10px;
+            left: -0.62em;
             &::after {
                 transform: rotate(-135deg);
-                margin-left: 4px;
+                margin-left: 0.25em;
             }
         }
         &--next {
-            right: -10px;
+            right: -0.62em;
             &::after {
                 transform: rotate(45deg);
                 margin-right: 4px;
@@ -54,10 +52,10 @@
         }
         &::after {
             content: '';
-            width: 10px;
-            height: 10px;
-            border-top: 2px solid #333;
-            border-right: 2px solid #333;
+            width: 0.62em;
+            height: 0.62em;
+            border-top: 0.12em solid #333;
+            border-right: 0.12em solid #333;
             display: block;
         }
     }

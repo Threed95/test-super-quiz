@@ -2,54 +2,60 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 0.5em;
-        list-style: none;
+        gap: 0.6em;
         padding: 0;
         margin: 0;
-        @media screen and (min-width: 992px) {
+        list-style: none;
+        @media (min-width: 62em) {
             flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            column-gap: 2em;
+            gap: 2em;
         }
     }
     &__item {
-        background-color: #fff;
-        border-radius: 1.2em;
-        &--dropdown {
-            background-color: transparent;
-            @media screen and (min-width: 992px) {
-                position: relative;
-                z-index: 2;
-                &:hover .menu__link {
-                    display: block;
-                    padding: 0.6em 0.8em;
-                    border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @media (min-width: 62em) {
+            position: relative;
+            &:hover {
+                .menu__link {
                     background-color: $hover-color;
-                    color: #fff;
+                    color: $primary-color;
                 }
-                &:hover .submenu {
-                    display: block;
+                .submenu {
+                    display: flex;
                 }
             }
-        }
-        @media screen and (min-width: 992px) {
-            background-color: transparent;
-            font-size: 1.25em;
         }
     }
     &__link {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 1.2em 1.5em;
+        background-color: $primary-color;
+        border-radius: 1.2em;
         text-decoration: none;
         color: #000;
-        @media screen and (min-width: 992px) {
-            display: block;
-            padding: 0.6em 0.8em;
+        font-size: 1.25em;
+        font-weight: 600;
+        &::after {
+            content: '';
+            width: 0.6em;
+            height: 0.6em;
+            border-top: 0.12em solid #000;
+            border-right: 0.12em solid #000;
+            transform: rotate(45deg);
+        }
+        @media (min-width: 62em) {
+            display: inline-flex;
+            width: max-content;
+            background-color: transparent;
+            padding: 0.6em 1em;
             border-radius: 1em;
-            &:hover {
-                background-color: $hover-color;
+            font-weight: $base-weight;
+            &::after {
+                display: none;
             }
         }
     }

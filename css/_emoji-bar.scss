@@ -13,6 +13,7 @@
         padding: 0.5em 1em;
         border-radius: 40em;
         background-color: $primary-color;
+        cursor: pointer;
     }
     &__icon {
         font-size: 1.6em;
@@ -23,7 +24,6 @@
         font-weight: $base-weight;
     }
     @media (min-width: 28.18em) {
-        // > 450px
         flex-direction: row;
         flex-wrap: wrap;
         gap: 0.8em;

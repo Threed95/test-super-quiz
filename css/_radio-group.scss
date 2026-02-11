@@ -35,7 +35,7 @@
             height: 1em;
             border-radius: 50%;
             border: 0.08em solid #000;
-            background-color: #fff;
+            background-color: $primary-color;
         }
         &::after {
             content: "";

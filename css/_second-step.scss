@@ -17,10 +17,10 @@
         border-radius: 2em;
         position: relative;
         text-align: center;
-        background: #fff;
+        background: $primary-color;
         width: 90%;
         max-width: 25em;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.25em 0.93em rgba(0, 0, 0, 0.1);
         z-index: 1001;
     }
     &__emoji {
@@ -60,7 +60,7 @@
         border: none;
         cursor: pointer;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 64em) {
         &__content {
             padding: 8em 0.5em 0.5em;
         }

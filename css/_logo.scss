@@ -1,15 +1,69 @@
 .logo {
-    font-family: 'NeueMachina';
-    cursor: pointer;
-    font-size: 1.8em;
-    &--footer {
-        color: $primary-color;
-        margin-bottom: 1em;
+    font-family: 'NeueMachina', sans-serif;
+    font-size: 1.5em;
+    &--header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75em;
+        border-bottom-left-radius: 2em;
+        border-bottom-right-radius: 2em;
+        border-radius: 2em;
+        background-color: $primary-color;
+        width: 20em;
+        height: 3.43em;
+    }
+    &__icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.19em;
+        background: #000;
+        border-radius: 3.12em;
+        padding: 0 0.62em;
+        position: relative;
+        width: 3.75em;
+        height: 1.5em;
+        overflow: hidden;
+        .line {
+            width: 100%;
+            height: 0.06em;
+            background: $primary-color;
+        }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 0.87em;
+            height: 0.07em;
+            background: $primary-color;
+        }
+        &::before {
+            left: 22%;
+            transform: translateY(-50%) rotate(-65deg);
+        }
+        &::after {
+            right: 22%;
+            transform: translateY(-50%) rotate(-65deg);
+        }
     }
     @media screen and (min-width: 80em) {
-        align-self: center;
+        &--header {
+            width: auto;
+            justify-content: flex-start;
+        }
     }
-    @media (min-width: 69.375em) {
+    @media screen and (min-width: 62em) {
         font-size: 2.25em;
+        &--header &__icon {
+            display: none;
+        }
+    }
+    &--footer {
+        color: $primary-color;
+        .logo__icon {
+            display: none;
+        }
     }
 }

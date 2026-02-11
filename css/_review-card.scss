@@ -1,15 +1,15 @@
 .review-card {
     position: relative;
     flex: 0 0 85%;
-    background: #fff;
+    background: $primary-color;
     border-radius: 3em;
     overflow: hidden;
     height: 32em;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.08);
-    @media (min-width: 1024px) {
-        flex: 0 0 calc(25% - 20px);
+    @media (min-width: 64em) {
+        flex: 0 0 calc(25% - 1.25em);
     }
     &__header {
         height: 50%;
@@ -24,7 +24,7 @@
     &__body {
         position: relative;
         height: 50%;
-        background: #fff;
+        background: $primary-color;
         padding: 3.5em 1.5em 1.5em;
         text-align: center;
         display: flex;
@@ -39,8 +39,8 @@
         width: 6em;
         height: 6em;
         border-radius: 50%;
-        border: 0.35em solid #fff;
-        background: #fff;
+        border: 0.35em solid $primary-color;
+        background: $primary-color;
         overflow: hidden;
         z-index: 10;
     }

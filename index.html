@@ -12,7 +12,15 @@
 <body class="page">
     <div class="container">
         <header class="header">
-            <div class="logo logo--header">Super Quiz</div>
+            <div class="logo logo--header">
+                <span class="logo__text">Super Quiz</span>
+                <!-- Этот элемент будет скрыт на десктопе и появится на 992px -->
+                <div class="logo__icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
@@ -28,7 +36,7 @@
                 </ul>
             </nav>
             <button id="open-modal" class="button button--primary">Связаться с нами</button>
-            <div class="social-links">
+            <div class="social-links social-links--header">
                 <a href="#" class="social-links__item">
                     <img src="./img/tt-icon.svg" alt="tik-tok">
                 </a>
