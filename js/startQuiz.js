@@ -152,6 +152,8 @@
             } else {
                 console.log("Final Answers:", userAnswers);
                 alert("Опрос завершен!");
+                location.reload(); 
+
             }
         } else {
             alert("Пожалуйста, выберите ответ!");
