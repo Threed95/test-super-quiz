@@ -1,27 +1,28 @@
 .quiz-card {
     display: flex;
+    flex-direction: column;
     position: relative;
-    width: 90%;
-    overflow: hidden;
+    width: 95%;
+    margin: 0 auto;
+    overflow: visible;
     &__history {
-        width: 20em;
+        display: none;
+        width: 100%;
         background-color: transparent;
         color: #fff;
-        margin-right: 0.5em;
-        align-self: start;
-        display: flex;
+        margin-right: 0;
+        align-self: stretch;
         flex-direction: column;
         gap: 1em;
     }
     &__history-item {
-        border-bottom-right-radius: 1em;
-        border-top-right-radius: 1em;
-        padding: 1.2em 1em;
+        border-radius: 1em;
+        padding: 1em;
         &--completed {
-            background-color: #ffffff; // Фон становится белым
+            background-color: #ffffff;
             .quiz-card__history-title,
             .quiz-card__history-answer {
-                color: #000000 !important; // Текст становится черным
+                color: #000000 !important;
             }
         }
         &--current {
@@ -35,65 +36,112 @@
     &__history-title {
         font-size: 1em;
         font-weight: 700;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.3em;
     }
     &__history-answer {
-        font-size: 1em;
+        font-size: 0.9em;
         font-weight: $base-weight;
     }
     &__content {
         position: relative;
-        width: 69.5em;
+        width: 100%;
         background-color: #fff;
-        padding: 2em 2em 3em;
+        padding: 2em 1.5em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        border-radius: 2em;
+        border-radius: 1.5em;
         z-index: 1;
         &::before {
             content: "";
             position: absolute;
-            top: -60px;
+            top: -30px;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
-            height: 60px;
+            height: 30px;
             background: linear-gradient(90deg, #F0D9FF 0%, #E9C4FF 100%);
-            box-shadow: 0 0 40px 10px #E9C4FF;
-            filter: blur(15px);
+            box-shadow: 0 0 20px 5px #E9C4FF;
+            filter: blur(10px);
             opacity: 0.9;
             z-index: -1;
             pointer-events: none;
         }
     }
     &__question-title {
-        font-size: 4.5em;
-        margin-bottom: 0.33em;
+        font-size: 2.2em;
+        margin-bottom: 0.5em;
         font-family: 'NeueMachina';
+        line-height: 1.1;
     }
     &__question-text {
-        font-size: 1.25em;
+        font-size: 1.1em;
         font-weight: $base-weight;
-        margin-bottom: 3.2em;
+        margin-bottom: 2em;
     }
     &__navigation {
         width: 100%;
         display: flex;
-        justify-content: flex-start;
-        gap: 1em;
+        flex-direction: column;
+        gap: 0.8em;
     }
     &__button {
-        padding: 1em 2em;
+        width: 100%;
+        padding: 1em;
         border: none;
         border-radius: 1em;
         cursor: pointer;
-        font-size: 1.25em;
+        font-size: 1.1em;
         font-weight: $base-weight;
         transition: background-color 0.3s ease;
         &:hover {
             background-color: $hover-color;
+        }
+    }
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        width: 90%;
+        &__history {
+            display: flex;
+            width: 20em;
+            margin-right: 0.5em;
+            align-self: start;
+        }
+        &__history-item {
+            border-radius: 0;
+            border-bottom-right-radius: 1em;
+            border-top-right-radius: 1em;
+            padding: 1.2em 1em;
+        }
+        &__content {
+            width: 69.5em;
+            padding: 2em 2em 3em;
+            border-radius: 2em;
+            &::before {
+                top: -60px;
+                height: 60px;
+                filter: blur(15px);
+                box-shadow: 0 0 40px 10px #E9C4FF;
+            }
+        }
+        &__question-title {
+            font-size: 4.5em;
+            margin-bottom: 0.33em;
+        }
+        &__question-text {
+            font-size: 1.25em;
+            margin-bottom: 3.2em;
+        }
+        &__navigation {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 1em;
+        }
+        &__button {
+            width: auto;
+            padding: 1em 2em;
+            font-size: 1.25em;
         }
     }
 }

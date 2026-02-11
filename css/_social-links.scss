@@ -13,6 +13,18 @@
             height: 4.5em;
             border-radius: 2.25em;
             overflow: hidden;
+            @media screen and (max-width: 83em) {
+                & {
+                    width: 10em;
+                    height: 2.25em;
+                }
+            }
+            @media screen and (max-width: 35em) {
+                & {
+                    width: 5.5em;
+                    height: 2em;
+                }
+            }
         }
         &--tiktok {
             background-color: #000;

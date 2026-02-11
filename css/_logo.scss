@@ -1,7 +1,15 @@
 .logo {
     font-family: 'NeueMachina';
-    font-size: 2.25em;
+    cursor: pointer;
+    font-size: 1.8em;
     &--footer {
         color: $primary-color;
+        margin-bottom: 1em;
+    }
+    @media screen and (min-width: 80em) {
+        align-self: center;
+    }
+    @media (min-width: 69.375em) {
+        font-size: 2.25em;
     }
 }

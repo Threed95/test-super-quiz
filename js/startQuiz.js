@@ -1,38 +1,37 @@
-const startQuiz = () => {
+ export const startQuiz = () => {
 
-        const questions = [{
-                title: "Какие виды тестов вам нравятся?",
-                description: "Многие из нас хоть раз попадались на эту удочку — хочешь пройти всего один тест из интернета, и вдруг понимаешь, что пролетело полдня.",
-                options: ["На темперамент", "Кто я из вселенной Марвел", "Увидел это", "Моё тотемное животное", "На IQ", "На словарный запас", "На логическое мышление", "На уровень интеллекта"]
-            },
-            {
-                title: "Вы любите проходить тесты?",
-                description: "Нам важно узнать насколько часто Вы проходите тесты.",
-                options: ["Нет, я никогда не прохожу тесты", "Да, я прохожу все тесты", "Заставляю себя проходить тесты", "Не люблю проходить тесты, но иногда приходится"]
-            },
-            {
-                title: "Спасибо за ответы! Заполните форму ниже",
-                description: "Ваше мнение важно для нас. Прикрепите фото с Вашей любимой картинкой и оставьте комментарий насколько понравился Вам тест.",
-                type: "custom"
-            }
-        ];
+         const questions = [{
+                 title: "Какие виды тестов вам нравятся?",
+                 description: "Многие из нас хоть раз попадались на эту удочку — хочешь пройти всего один тест из интернета, и вдруг понимаешь, что пролетело полдня.",
+                 options: ["На темперамент", "Кто я из вселенной Марвел", "Увидел это", "Моё тотемное животное", "На IQ", "На словарный запас", "На логическое мышление", "На уровень интеллекта"]
+             },
+             {
+                 title: "Вы любите проходить тесты?",
+                 description: "Нам важно узнать насколько часто Вы проходите тесты.",
+                 options: ["Нет, я никогда не прохожу тесты", "Да, я прохожу все тесты", "Заставляю себя проходить тесты", "Не люблю проходить тесты, но иногда приходится"]
+             },
+             {
+                 title: "Спасибо за ответы! Заполните форму ниже",
+                 description: "Ваше мнение важно для нас. Прикрепите фото с Вашей любимой картинкой и оставьте комментарий насколько понравился Вам тест.",
+                 type: "custom"
+             }
+         ];
 
-        let currentStep = 0;
-        const userAnswers = {};
+         let currentStep = 0;
+         const userAnswers = {};
 
-        const historyPanel = document.querySelector('.quiz-card__history');
-        const contentArea = document.getElementById('quiz-content-area');
-        const btnNext = document.getElementById('continue-button');
-        const btnBack = document.getElementById('back-button');
+         const historyPanel = document.querySelector('.quiz-card__history');
+         const contentArea = document.getElementById('quiz-content-area');
+         const btnNext = document.getElementById('continue-button');
+         const btnBack = document.getElementById('back-button');
 
-        function render() {
-            const q = questions[currentStep];
+         function render() {
+             const q = questions[currentStep];
 
-            // Кнопка "Назад"
-            btnBack.style.display = currentStep === 0 ? 'none' : 'block';
+             btnBack.style.display = currentStep === 0 ? 'none' : 'block';
 
-            if (q.type === 'custom') {
-                contentArea.innerHTML = `
+             if (q.type === 'custom') {
+                 contentArea.innerHTML = `
                 <div class="quiz-emojis">
                   <span class="quiz-emogis__item quiz-emogis__item--wink">&#128521;</span>
                   <span class="quiz-emogis__item quiz-emogis__item--thumb">&#128077;</span>
@@ -55,16 +54,15 @@ const startQuiz = () => {
                     </div>
                 </div>
             `;
-                initCustomSelect();
+                 initCustomSelect();
 
-                // Сохраняем ввод в форме, но renderHistory не покажет текст (согласно логике ниже)
-                document.getElementById('opinion-input').oninput = (e) => {
-                    if (!userAnswers[currentStep]) userAnswers[currentStep] = {};
-                    userAnswers[currentStep].text = e.target.value;
-                    userAnswers[currentStep].rating = document.getElementById('selected-text').innerText;
-                };
-            } else {
-                contentArea.innerHTML = `
+                 document.getElementById('opinion-input').oninput = (e) => {
+                     if (!userAnswers[currentStep]) userAnswers[currentStep] = {};
+                     userAnswers[currentStep].text = e.target.value;
+                     userAnswers[currentStep].rating = document.getElementById('selected-text').innerText;
+                 };
+             } else {
+                 contentArea.innerHTML = `
                 <h2 class="quiz-card__question-title">${q.title}</h2>
                 <p class="quiz-card__question-text">${q.description}</p>
                 <div class="radio-group">
@@ -76,7 +74,6 @@ const startQuiz = () => {
                 </div>
             `;
 
-            // Мгновенное отображение ответа в истории для обычных вопросов
             document.querySelectorAll('input[name="quiz-opt"]').forEach(input => {
                 input.onchange = () => {
                     userAnswers[currentStep] = input.value;
@@ -96,22 +93,20 @@ const startQuiz = () => {
                 const isCompleted = i < currentStep;
                 const item = document.createElement('div');
                 
-                // Классы для стилизации
                 item.className = `quiz-card__history-item ${isCurrent ? 'quiz-card__history-item--current' : ''} ${isCompleted ? 'quiz-card__history-item--completed' : ''}`;
                 
                 let answerContent = '';
 
-                // Если это ПРЕДЫДУЩИЙ вопрос
                 if (isCompleted) {
                     const ans = userAnswers[i];
                     const textToShow = typeof ans === 'object' ? (ans.text || ans.rating) : ans;
                     answerContent = `<div class="quiz-card__history-answer">${textToShow || '...'}</div>`;
                 } 
-                // Если это ТЕКУЩИЙ вопрос, но НЕ форма (3-й вопрос)
+            
                 else if (isCurrent && q.type !== 'custom') {
                     answerContent = `<div class="quiz-card__history-answer">${userAnswers[i] || ''}</div>`;
                 }
-                // Если это ТЕКУЩИЙ 3-й вопрос (custom), answerContent остается пустым
+                
 
                 item.innerHTML = `
                     <div class="quiz-card__history-title">${q.title}</div>
@@ -141,7 +136,7 @@ const startQuiz = () => {
                 
                 if (!userAnswers[currentStep]) userAnswers[currentStep] = {};
                 userAnswers[currentStep].rating = val;
-                // На 3-м шаге ответ в истории не перерисовываем по вашему условию
+        
             };
         });
 
@@ -173,5 +168,3 @@ const startQuiz = () => {
     render();
 
 }
-
-startQuiz();
