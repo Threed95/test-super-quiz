@@ -1,49 +1,35 @@
 .submenu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.5em;
     padding: 0.5em 0;
     list-style: none;
     &__item {
-        background-color: #ffffff;
-        border-radius: 1em;
-        &:last-child {
-            grid-column: span 2;
-        }
+        width: auto;
+        background: transparent;
     }
     &__link {
-        display: block;
-        padding: 1em;
+        display: inline-block;
+        padding: 0.8em 1.5em;
         text-align: center;
         text-decoration: none;
-        color: #000000;
+        color: #ffffff;
+        background-color: #000000;
+        border-radius: 2em;
         font-size: 0.9em;
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: $hover-color;
+        }
     }
     @media screen and (min-width: 992px) {
         display: none;
         position: absolute;
-        grid-template-columns: 1fr;
         top: 100%;
         left: 0;
         min-width: 15em;
-        background: #000000;
-        padding: 1em;
+        padding: 1em 0;
         z-index: 10;
-        &__item {
-            background: transparent;
-            &:last-child {
-                grid-column: auto;
-            }
-        }
-        &__link {
-            color: #ffffff;
-            text-align: left;
-        }
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .menu__item--dropdown:hover .submenu {
-        display: block;
     }
 }
